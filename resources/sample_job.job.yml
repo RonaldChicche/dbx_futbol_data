@@ -23,6 +23,8 @@ resources:
 
       tasks:
         - task_key: notebook_task
+          max_retries: 2
+          min_retry_interval_millis: 30000
           notebook_task:
             notebook_path: ../src/sample_notebook.ipynb
         - task_key: python_wheel_task
